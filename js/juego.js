@@ -24,7 +24,7 @@ const preguntas = [
     pregunta: "¿Cuál es el océano más grande del planeta?",
     opciones: ["A) Atlántico", "B) Índico", "C) Pacífico"],
     respuesta: "C"
-    }
+    },
 ];
 
 let puntaje = 0;
@@ -42,20 +42,29 @@ function iniciarJuego() {
 }
 
   // Función para hacer las preguntas
-function hacerPreguntas() {
+  function hacerPreguntas() {
     for (let i = 0; i < preguntas.length; i++) {
-    let p = preguntas[i];
-    let mensaje = `Pregunta ${i + 1}:\n${p.pregunta}\n` + p.opciones.join("\n");
-    let respuestaUsuario = prompt(mensaje).toUpperCase();
-
-    if (respuestaUsuario === p.respuesta) {
+      let p = preguntas[i];
+      let mensaje = `Pregunta ${i + 1}:\n${p.pregunta}\n` + p.opciones.join("\n");
+      let respuestaUsuario = prompt(mensaje);
+  
+      // Si el usuario cancela
+      if (respuestaUsuario === null) {
+        alert("Juego cancelado. ¡Hasta la próxima!");
+        console.log("El usuario canceló el juego durante las preguntas.");
+        return; // salir de la función para que no sigan las preguntas
+      }
+  
+      respuestaUsuario = respuestaUsuario.toUpperCase();
+  
+      if (respuestaUsuario === p.respuesta) {
         alert("¡Correcto!");
         puntaje++;
-    } else {
+      } else {
         alert(`Incorrecto. La respuesta correcta era ${p.respuesta}`);
+      }
     }
-    }
-}
+  }
 
   // Función para mostrar resultados
 function mostrarResultados() {
