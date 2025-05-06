@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "trivia";
+    src: url(../fonts/majetto.ttf);
+}
+
+body {
+    background-color: #241715;
+    color: #D9B8C4;
+    font-family: 'trivia';
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+body div {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body h1 {
+    justify-self: center;
+    margin: 0;
+    padding: 0;
+}
+
+body p {
+    font-size: 22px;
+    width: 75%;
+    height: auto;
+    justify-self: center;
+}
