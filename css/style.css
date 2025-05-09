@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "trivia";
+    src: url(../fonts/majetto.ttf);
+}
+
 body {
     background-color: #241715;
     color: #D9B8C4;
@@ -5,6 +10,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    font-family: "trivia";
 }
 
 body div {
@@ -32,12 +38,13 @@ body p {
 button {
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 20px;
     background-color: #D9B8C4;
     color: #241715;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    font-family: "trivia";
 }
 
 button:hover {
